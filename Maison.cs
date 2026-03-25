@@ -54,7 +54,7 @@ class Maison : Logement
 
     public override void Afficher()
     {
-        Console.WriteLine("\n------- Logement : -------");
+        Console.WriteLine("\n------- Maison : -------");
         Console.WriteLine($"réference : {reference}");
         Console.WriteLine($"adresse : {adresse}");
         Console.WriteLine($"surface : {surface} m²");
@@ -69,5 +69,10 @@ class Maison : Logement
             Console.WriteLine("status : indisponile");
         }
         Console.WriteLine("--------------------------\n");
+    }
+
+    public override double CalculerLoyer()
+    {
+        return loyerBase + (10*surfaceJardin);
     }
 }

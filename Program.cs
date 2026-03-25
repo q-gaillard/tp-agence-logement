@@ -17,5 +17,13 @@ class Program
         appart1.Afficher();
         Maison maison1 = new Maison("la Maison de rêve de Barbie", "0 rue de la Rue à Rueville", 900, 10, false, -5);
         maison1.Afficher();
+
+        //afficher les loyers
+        Console.WriteLine("*** prix des loyer : ***");
+        Console.WriteLine(log1.CalculerLoyer());
+        Console.WriteLine(studio1.CalculerLoyer());
+        Console.WriteLine(appart1.CalculerLoyer());
+        Console.WriteLine(maison1.CalculerLoyer());
+        Console.WriteLine("*****");
     }
 }

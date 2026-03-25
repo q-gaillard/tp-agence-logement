@@ -44,7 +44,7 @@ class Studio : Logement
 
     public override void Afficher()
     {
-        Console.WriteLine("\n------- Logement : -------");
+        Console.WriteLine("\n------- Studio : -------");
         Console.WriteLine($"réference : {reference}");
         Console.WriteLine($"adresse : {adresse}");
         Console.WriteLine($"surface : {surface} m²");
@@ -66,5 +66,17 @@ class Studio : Logement
             Console.WriteLine(" / sans meubles");
         }
         Console.WriteLine("--------------------------\n");
+    }
+
+    public override double CalculerLoyer()
+    {
+        if (meuble)
+        {
+            return loyerBase + 50;
+        }
+        else
+        {
+            return loyerBase;
+        }
     }
 }

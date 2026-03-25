@@ -64,7 +64,7 @@ class Appartement : Logement
 
     public override void Afficher()
     {
-        Console.WriteLine("\n------- Logement : -------");
+        Console.WriteLine("\n------- Appartement : -------");
         Console.WriteLine($"réference : {reference}");
         Console.WriteLine($"adresse : {adresse}");
         Console.WriteLine($"surface : {surface} m²");
@@ -79,5 +79,10 @@ class Appartement : Logement
             Console.WriteLine("status : indisponile");
         }
         Console.WriteLine("--------------------------\n");
+    }
+
+    public override double CalculerLoyer()
+    {
+        return loyerBase + (100*nombreDePieces);
     }
 }

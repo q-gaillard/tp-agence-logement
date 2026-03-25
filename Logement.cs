@@ -104,7 +104,7 @@ class Logement
         Console.WriteLine("--------------------------\n");
     }
 
-    public double CalculerLoyer()
+    public virtual double CalculerLoyer()
     {
         return loyerBase;
     }
