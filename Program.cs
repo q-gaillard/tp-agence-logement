@@ -13,7 +13,7 @@ class Program
         // création de logement spéciaux
         Studio studio1 = new Studio("Studio des fous", "67 rue Untitled Street à FouVille", 1500, 1220, false, true);
         studio1.Afficher();
-        Appartement appart1 = new Appartement("magnifique est sonptueux appartement de 5m²", "quelque perdu dans Paris", 5, 122, true, 2);
+        Appartement appart1 = new Appartement("magnifique et sonptueux appartement de 5m²", "quelque perdu dans Paris", 5, 122, true, 2);
         appart1.Afficher();
         Maison maison1 = new Maison("la Maison de rêve de Barbie", "0 rue de la Rue à Rueville", 900, 10, false, -5);
         maison1.Afficher();
@@ -25,5 +25,20 @@ class Program
         Console.WriteLine(appart1.CalculerLoyer());
         Console.WriteLine(maison1.CalculerLoyer());
         Console.WriteLine("*****");
+
+        //polymorphisme
+        List<Logement> logements = new List<Logement>
+        {
+            new Studio("Studio des fous", "67 rue Untitled Street à FouVille", 1500, 1220, false, true),
+            new Appartement("magnifique et sonptueux appartement de 5m²", "quelque perdu dans Paris", 5, 122, true, 2),
+            new Maison("la Maison de rêve de Barbie", "0 rue de la Rue à Rueville", 900, 10, false, -5)
+        };
+
+        Console.WriteLine("liste des logements :");
+        foreach (Logement logement in logements)
+        {
+            logement.Afficher();
+            Console.WriteLine($"pirix du loyer de {logement.GetReference()} est de {logement.CalculerLoyer()} euro");
+        }
     }
 }
