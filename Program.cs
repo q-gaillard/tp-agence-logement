@@ -40,5 +40,15 @@ class Program
             logement.Afficher();
             Console.WriteLine($"pirix du loyer de {logement.GetReference()} est de {logement.CalculerLoyer()} euro");
         }
+
+        // création de locataire
+        Locataire loc1 = new Locataire(1, "Shrek", "06 06 06 06 06");
+        Locataire loc2 = new Locataire(2, "quelqu'un", "06 05 04 03 21");
+        Locataire loc3 = new Locataire(3, "gandalf", "06 12 21 22 12");
+        
+        loc1.Afficher();
+        loc2.Afficher();
+        loc3.Afficher();
+
     }
 }
