@@ -11,11 +11,11 @@ class Program
         log2.Afficher();
 
         // création de logement spéciaux
-        Studio studio1 = new Studio("Studio des fous", "67 rue Untitled Street à FouVille", 1500, 1220, false, true);
+        Studio studio1 = new Studio("Studio des fous", "67 rue Untitled Street à FouVille", 1500, 1220, true, true);
         studio1.Afficher();
-        Appartement appart1 = new Appartement("magnifique et sonptueux appartement de 5m²", "quelque perdu dans Paris", 5, 122, true, 2);
+        Appartement appart1 = new Appartement("magnifique et sonptueux appartement de 5m²", "quelque perdu dans Paris", 5, 122, false, 2);
         appart1.Afficher();
-        Maison maison1 = new Maison("la Maison de rêve de Barbie", "0 rue de la Rue à Rueville", 900, 10, false, -5);
+        Maison maison1 = new Maison("la Maison de rêve de Barbie", "0 rue de la Rue à Rueville", 900, 10, true, -5);
         maison1.Afficher();
 
         //afficher les loyers
@@ -50,5 +50,16 @@ class Program
         loc2.Afficher();
         loc3.Afficher();
 
+        // crée des contrats de location
+        ContratLocation contrat1 = new ContratLocation(1, loc2, studio1, 20);
+        ContratLocation contrat2 = new ContratLocation(2, loc1, maison1, 20);
+        
+        ContratLocation contrat3 = new ContratLocation(3, loc3, log1, 0);
+        ContratLocation contrat4 = new ContratLocation(4, loc3, log2, 1);
+
+        contrat1.Afficher();
+        contrat2.Afficher();
+        contrat3.Afficher();
+        contrat4.Afficher();
     }
 }
