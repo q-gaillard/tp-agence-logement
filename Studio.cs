@@ -41,4 +41,30 @@ class Studio : Logement
         this.disponible = false;
         this.meuble = false;
     }
+
+    public override void Afficher()
+    {
+        Console.WriteLine("\n------- Logement : -------");
+        Console.WriteLine($"réference : {reference}");
+        Console.WriteLine($"adresse : {adresse}");
+        Console.WriteLine($"surface : {surface} m²");
+        Console.WriteLine($"prix du loyer : {loyerBase} euro");
+        if (disponible)
+        {
+            Console.Write("status : disponible");
+        }
+        else
+        {
+            Console.Write("status : indisponile");
+        }
+        if (meuble)
+        {
+            Console.WriteLine(" / avec meubles");
+        }
+        else
+        {
+            Console.WriteLine(" / sans meubles");
+        }
+        Console.WriteLine("--------------------------\n");
+    }
 }

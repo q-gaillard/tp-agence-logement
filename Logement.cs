@@ -86,7 +86,7 @@ class Logement
         this.disponible = false;
     }
 
-    public void Afficher()
+    public virtual void Afficher()
     {
         Console.WriteLine("\n------- Logement : -------");
         Console.WriteLine($"réference : {reference}");
