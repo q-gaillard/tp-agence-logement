@@ -61,5 +61,15 @@ class Program
         contrat2.Afficher();
         contrat3.Afficher();
         contrat4.Afficher();
+
+        //crée des agences
+        Agence agence1 = new Agence("l'agence des gens bizarres", new List<Locataire>{loc1, loc2, loc3, loc1}, new List<Logement>{log1, log2, studio1, appart1, maison1}, new List<ContratLocation>());
+        agence1.Afficher();
+
+        agence1.AddLocataire(new Locataire(4, "Spider man", "06 67 23 67 67"));
+        agence1.AddLogement(maison1);
+        agence1.AddLogement(new Maison("la maison blanche", "1600 rue Pennsylvania Avenue NW à Washington D.C", 73000, 9999999, true, 600));
+        agence1.AddContratLocation( new ContratLocation(5, agence1.GetLocataires()[3], agence1.GetLogements()[4], 122));
+        agence1.Afficher();
     }
 }
